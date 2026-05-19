@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Finlay's Bookshop — a fun place for stories, book covers, updates, and creative projects." />
+  <title>Finlay's Bookshop</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <nav class="topbar" aria-label="Main navigation">
+      <a class="logo" href="#top" aria-label="Finlay's Bookshop home">📚 Finlay's Bookshop</a>
+      <div class="nav-links">
+        <a href="#books">Books</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#join">Join the team</a>
+      </div>
+    </nav>
+
+    <section id="top" class="hero-card">
+      <p class="eyebrow">Stories, adventures, and big ideas</p>
+      <h1>Welcome to Finlay's Bookshop</h1>
+      <p class="hero-text">A cheerful little corner of the internet for Finlay's books, artwork, updates, and future bookshop plans.</p>
+      <a class="button" href="#books">See the books</a>
+    </section>
+  </header>
+
+  <main>
+    <section id="books" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Latest book</p>
+        <h2>Bookshelf</h2>
+      </div>
+
+      <article class="book-card">
+        <img src="images/book1.svg" alt="Cover for Finlay Goes to Gaul" />
+        <div>
+          <h3>Finlay Goes to Gaul</h3>
+          <p>A cartoony adventure full of imagination, travelling, and heroic bookshop-level nonsense. Proper description coming soon.</p>
+          <ul class="book-facts">
+            <li>✨ Written by Finlay</li>
+            <li>🎨 Cover gallery coming soon</li>
+            <li>🛒 Purchase link will be added later</li>
+          </ul>
+        </div>
+      </article>
+    </section>
+
+    <section id="gallery" class="section gallery-section">
+      <div class="section-heading">
+        <p class="eyebrow">Artwork corner</p>
+        <h2>Image gallery</h2>
+      </div>
+      <div class="gallery-grid">
+        <figure><img src="images/book1.svg" alt="Finlay Goes to Gaul cover"><figcaption>First book cover</figcaption></figure>
+        <figure class="coming-soon">More covers soon!</figure>
+        <figure class="coming-soon">Character art soon!</figure>
+      </div>
+    </section>
+
+    <section id="join" class="section join-section">
+      <div class="section-heading">
+        <p class="eyebrow">Recruitment desk</p>
+        <h2>Want to help?</h2>
+      </div>
+      <p>Potential employees, illustrators, idea-makers, snack managers, and sensible grown-ups can send a message below.</p>
+      <form class="contact-form" action="mailto:your-email@example.com" method="post" enctype="text/plain">
+        <label>Name <input name="name" autocomplete="name" required></label>
+        <label>Email <input type="email" name="email" autocomplete="email" required></label>
+        <label>How would you like to help? <textarea name="message" rows="5" required></textarea></label>
+        <button type="submit">Send message</button>
+      </form>
+      <p class="small-note">Note: the email address is currently a placeholder. We'll swap in Donald's address before sharing widely.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Finlay's Bookshop. Made with stories, cartoons, and probably biscuits.</p>
+  </footer>
+</body>
+</html>
