@@ -124,9 +124,47 @@ h3 { font-size: clamp(1.8rem, 4vw, 3rem); color: #dc2626; }
   box-shadow: 0 14px 0 rgba(37, 48, 71, .14);
   background: white;
 }
-.book-card p, .join-section p { font-size: 1.15rem; }
+.book-card p, .join-section p, .section-intro, .ideas-section p { font-size: 1.15rem; }
 .book-facts { padding-left: 1.2rem; font-weight: 800; }
 .book-facts li { margin: 8px 0; }
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+.info-card {
+  background: white;
+  border: 5px solid #fff;
+  border-radius: 26px;
+  padding: 22px;
+  box-shadow: 0 12px 0 rgba(37, 48, 71, .12);
+}
+.info-card h3 { font-size: clamp(1.4rem, 3vw, 2rem); }
+.card-icon { display: inline-block; font-size: 2.4rem; margin-bottom: 12px; }
+.price-note {
+  display: inline-block;
+  margin: 8px 0 0;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: var(--yellow);
+  font-weight: 900;
+}
+
+.coming-list {
+  display: grid;
+  gap: 14px;
+}
+.coming-list div {
+  display: grid;
+  gap: 6px;
+  background: #fff7ed;
+  border: 4px dashed var(--orange);
+  border-radius: 22px;
+  padding: 18px;
+}
+.coming-list strong { font-size: 1.3rem; }
+.coming-list span { font-size: 1.08rem; }
 
 .gallery-grid {
   display: grid;
@@ -150,6 +188,12 @@ figcaption { text-align: center; font-weight: 900; margin-top: 10px; }
 }
 
 .contact-form { display: grid; gap: 14px; max-width: 680px; }
+.idea-form {
+  background: rgba(255, 255, 255, .55);
+  border: 4px solid #fff;
+  border-radius: 24px;
+  padding: 18px;
+}
 label { display: grid; gap: 7px; font-weight: 900; }
 input, textarea {
   width: 100%;
@@ -166,6 +210,6 @@ footer { text-align: center; padding: 28px 16px 48px; font-weight: 900; }
 
 @media (max-width: 760px) {
   .topbar { border-radius: 28px; align-items: flex-start; flex-direction: column; }
-  .book-card, .gallery-grid { grid-template-columns: 1fr; }
+  .book-card, .gallery-grid, .info-grid { grid-template-columns: 1fr; }
   .hero-card { transform: none; }
 }
