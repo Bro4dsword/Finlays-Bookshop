@@ -131,11 +131,11 @@ h1 {
   font-size: clamp(4rem, 14vw, 10.8rem);
   font-weight: 950;
   letter-spacing: -.08em;
-  color: #7ed957;
+  color: #1e3a8a;
   text-transform: uppercase;
   text-shadow:
-    3px 3px 0 #1f7a2e,
-    6px 6px 0 #12391b,
+    3px 3px 0 #93c5fd,
+    6px 6px 0 #0f172a,
     8px 8px 0 rgba(0,0,0,.28);
 }
 h2 { font-size: clamp(2rem, 5.5vw, 4.4rem); }
