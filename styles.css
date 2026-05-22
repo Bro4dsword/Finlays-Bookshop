@@ -126,10 +126,17 @@ a { color: inherit; }
 
 h1, h2, h3 { line-height: 1.02; margin: 0; letter-spacing: -.045em; }
 h1 {
-  max-width: 820px;
-  font-size: clamp(3rem, 10vw, 7.5rem);
-  color: var(--blue);
-  text-shadow: 3px 3px 0 #fca5a5;
+  max-width: 860px;
+  font-family: "Courier New", "Lucida Console", monospace;
+  font-size: clamp(2.3rem, 8vw, 6.2rem);
+  font-weight: 950;
+  letter-spacing: -.08em;
+  color: #7ed957;
+  text-transform: uppercase;
+  text-shadow:
+    3px 3px 0 #1f7a2e,
+    6px 6px 0 #12391b,
+    8px 8px 0 rgba(0,0,0,.28);
 }
 h2 { font-size: clamp(2rem, 5.5vw, 4.4rem); }
 h3 { font-size: clamp(1.45rem, 3.2vw, 2.4rem); color: #dc2626; }
