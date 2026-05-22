@@ -128,7 +128,7 @@ h1, h2, h3 { line-height: 1.02; margin: 0; letter-spacing: -.045em; }
 h1 {
   max-width: 860px;
   font-family: "Courier New", "Lucida Console", monospace;
-  font-size: clamp(2.3rem, 8vw, 6.2rem);
+  font-size: clamp(4rem, 14vw, 10.8rem);
   font-weight: 950;
   letter-spacing: -.08em;
   color: #7ed957;
