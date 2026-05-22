@@ -15,6 +15,7 @@
         <a href="#books">Books</a>
         <a href="#gallery">Gallery</a>
         <a href="#prices">Prices</a>
+        <a href="#order-request">Buy or rent</a>
         <a href="#coming-soon">Coming soon</a>
         <a href="#your-ideas">Your ideas</a>
       </div>
@@ -24,7 +25,10 @@
       <p class="eyebrow">Stories, adventures, and big ideas</p>
       <h1>Welcome to Finlay's Bookshop</h1>
       <p class="hero-text">A cheerful little corner of the internet for Finlay's books, artwork, updates, and future bookshop plans.</p>
-      <a class="button" href="#books">See the books</a>
+      <div class="hero-actions">
+        <a class="button" href="#books">See the books</a>
+        <a class="button secondary-button" href="#order-request">Request a book</a>
+      </div>
     </section>
   </header>
 
@@ -43,7 +47,7 @@
           <ul class="book-facts">
             <li>✨ Written by Finlay</li>
             <li>🎨 Cover gallery coming soon</li>
-            <li>🛒 Purchase link will be added later</li>
+            <li>🛒 Requests handled by Donald</li>
           </ul>
         </div>
       </article>
@@ -79,7 +83,7 @@
         <p class="eyebrow">Bookshop counter</p>
         <h2>Prices</h2>
       </div>
-      <p class="section-intro">The official price list is still being decided by Bookshop Management, but these are the options we’re planning.</p>
+      <p class="section-intro">The official price list is parent-reviewed. Requests go to Donald first, then he confirms the details before any payment or book swap happens.</p>
       <div class="info-grid">
         <article class="info-card">
           <span class="card-icon">✍️</span>
@@ -102,6 +106,41 @@
       </div>
     </section>
 
+    <section id="order-request" class="section order-section">
+      <div class="section-heading">
+        <p class="eyebrow">Parent-reviewed requests</p>
+        <h2>Buy, rent, or ask for a custom book</h2>
+      </div>
+      <p class="section-intro">Use this to ask about a book. No payment is taken on this page — Donald checks the request first and replies with the next step.</p>
+      <div class="request-layout">
+        <div class="request-card">
+          <h3>How it works</h3>
+          <ol>
+            <li>Choose what you’re interested in.</li>
+            <li>Send a short request to Donald.</li>
+            <li>Donald confirms availability, delivery/collection, and payment if needed.</li>
+          </ol>
+          <p class="small-note">For now this is a simple request form, not a checkout. Sensible grown-up infrastructure, sadly less exciting than a dragon cashier.</p>
+        </div>
+        <form class="contact-form request-form" action="mailto:donlamb@compuserve.com" method="post" enctype="text/plain">
+          <label>Your name <input name="name" autocomplete="name" required></label>
+          <label>Email for Donald to reply <input type="email" name="email" autocomplete="email" required></label>
+          <label>What would you like?
+            <select name="request-type" required>
+              <option value="">Choose one…</option>
+              <option>Buy a custom-made book (£1.50)</option>
+              <option>Buy a stock book (£1.00)</option>
+              <option>Rent a stock book (£0.35)</option>
+              <option>Ask a question first</option>
+            </select>
+          </label>
+          <label>Book or idea details <textarea name="details" rows="5" placeholder="Example: I’d like a custom football story, or I’d like to rent The Liverpool Derby." required></textarea></label>
+          <button type="submit">Send request to Donald</button>
+        </form>
+      </div>
+      <p class="small-note">Note: this opens an email draft to Donald so he can review the request before anything is agreed.</p>
+    </section>
+
     <section id="coming-soon" class="section coming-section">
       <div class="section-heading">
         <p class="eyebrow">Next on the shelf</p>
@@ -120,12 +159,12 @@
         <h2>Your ideas</h2>
       </div>
       <p>Got an idea for a future character, storyline, setting, or plot twist? Write it down here for the Bookshop Ideas Department.</p>
-      <form class="contact-form idea-form" action="mailto:your-email@example.com" method="post" enctype="text/plain">
+      <form class="contact-form idea-form" action="mailto:donlamb@compuserve.com" method="post" enctype="text/plain">
         <label>Your idea title <input name="idea-title" placeholder="Example: The Dragon Goalkeeper" required></label>
         <label>Tell us the idea <textarea name="idea" rows="5" placeholder="A character, story, place, football match, mystery, monster, or anything else..." required></textarea></label>
         <button type="submit">Send idea</button>
       </form>
-      <p class="small-note">Note: this currently opens an email draft using a placeholder address. We’ll swap in the proper address before sharing widely.</p>
+      <p class="small-note">Note: this opens an email draft to Donald so ideas can be reviewed safely.</p>
     </section>
 
     <section id="join" class="section join-section">
@@ -134,13 +173,13 @@
         <h2>Want to help?</h2>
       </div>
       <p>Potential employees, illustrators, idea-makers, snack managers, and sensible grown-ups can send a message below.</p>
-      <form class="contact-form" action="mailto:your-email@example.com" method="post" enctype="text/plain">
+      <form class="contact-form" action="mailto:donlamb@compuserve.com" method="post" enctype="text/plain">
         <label>Name <input name="name" autocomplete="name" required></label>
         <label>Email <input type="email" name="email" autocomplete="email" required></label>
         <label>How would you like to help? <textarea name="message" rows="5" required></textarea></label>
         <button type="submit">Send message</button>
       </form>
-      <p class="small-note">Note: the email address is currently a placeholder. We'll swap in Donald's address before sharing widely.</p>
+      <p class="small-note">Note: this opens an email draft to Donald so he can reply when he’s ready.</p>
     </section>
   </main>
 

@@ -99,6 +99,9 @@ h3 { font-size: clamp(1.8rem, 4vw, 3rem); color: #dc2626; }
   cursor: pointer;
 }
 .button:hover, button:hover { transform: translateY(2px); box-shadow: 0 6px 0 #be185d; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+.secondary-button { background: var(--blue); box-shadow: 0 8px 0 #1d4ed8; }
+.secondary-button:hover { box-shadow: 0 6px 0 #1d4ed8; }
 
 .section {
   background: rgba(255, 250, 240, .9);
@@ -187,15 +190,30 @@ figcaption { text-align: center; font-weight: 900; margin-top: 10px; }
   padding: 18px;
 }
 
+.request-layout {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(280px, 1.1fr);
+  gap: 22px;
+  align-items: start;
+}
+.request-card {
+  background: #eff6ff;
+  border: 5px solid #fff;
+  border-radius: 26px;
+  padding: 22px;
+  box-shadow: 0 12px 0 rgba(37, 48, 71, .12);
+}
+.request-card h3 { font-size: clamp(1.5rem, 3vw, 2.2rem); color: var(--blue); }
+.request-card li { margin: 10px 0; font-weight: 800; }
 .contact-form { display: grid; gap: 14px; max-width: 680px; }
-.idea-form {
+.request-form, .idea-form {
   background: rgba(255, 255, 255, .55);
   border: 4px solid #fff;
   border-radius: 24px;
   padding: 18px;
 }
 label { display: grid; gap: 7px; font-weight: 900; }
-input, textarea {
+input, textarea, select {
   width: 100%;
   border: 4px solid #93c5fd;
   border-radius: 18px;
@@ -203,13 +221,13 @@ input, textarea {
   font: inherit;
   background: white;
 }
-input:focus, textarea:focus { outline: 4px solid rgba(255, 209, 102, .75); }
+input:focus, textarea:focus, select:focus { outline: 4px solid rgba(255, 209, 102, .75); }
 .small-note { font-size: .95rem !important; opacity: .8; }
 
 footer { text-align: center; padding: 28px 16px 48px; font-weight: 900; }
 
 @media (max-width: 760px) {
   .topbar { border-radius: 28px; align-items: flex-start; flex-direction: column; }
-  .book-card, .gallery-grid, .info-grid { grid-template-columns: 1fr; }
+  .book-card, .gallery-grid, .info-grid, .request-layout { grid-template-columns: 1fr; }
   .hero-card { transform: none; }
 }
