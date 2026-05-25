@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Finlay's Bookshop — a fun place for stories, book covers, updates, and creative projects." />
-  <title>Finlay's Bookshop</title>
+  <meta name="description" content="Finlay's Library — a fun place for stories, book covers, updates, and creative projects." />
+  <title>Finlay's Library</title>
   <link rel="stylesheet" href="styles.css?v=blue-minecraft-title-20260522-1752" />
 </head>
 <body>
   <header class="hero">
     <nav class="topbar" aria-label="Main navigation">
-      <a class="logo" href="#top" aria-label="Finlay's Bookshop home">📚 Finlay's Bookshop</a>
+      <a class="logo" href="#top" aria-label="Finlay's Library home">📚 Finlay's Library</a>
       <div class="nav-links">
         <a href="#books">Books</a>
         <a href="#gallery">Gallery</a>
         <a href="#prices">Prices</a>
-        <a href="#order-request">Buy or rent</a>
+        <a href="#order-request">Membership</a>
         <a href="#coming-soon">Coming soon</a>
         <a href="#your-ideas">Your ideas</a>
         <a href="#reviews">Reviews</a>
@@ -24,11 +24,11 @@
 
     <section id="top" class="hero-card">
       <p class="eyebrow">Stories, adventures, and big ideas</p>
-      <h1>Welcome to Finlay's Bookshop</h1>
-      <p class="hero-text">A cheerful little corner of the internet for Finlay's books, artwork, updates, and future bookshop plans.</p>
+      <h1>Welcome to Finlay's Library</h1>
+      <p class="hero-text">A cheerful little corner of the internet for Finlay's books, artwork, updates, and future library plans.</p>
       <div class="hero-actions">
         <a class="button" href="#books">See the books</a>
-        <a class="button secondary-button" href="#order-request">Request a book</a>
+        <a class="button secondary-button" href="#order-request">Join the library</a>
       </div>
     </section>
   </header>
@@ -53,28 +53,28 @@
 
     <section id="prices" class="section prices-section">
       <div class="section-heading">
-        <p class="eyebrow">Bookshop counter</p>
-        <h2>Prices</h2>
+        <p class="eyebrow">Library counter</p>
+        <h2>Membership and prices</h2>
       </div>
-      <p class="section-intro">The official price list is parent-reviewed. Requests go to Donald first, then he confirms the details before any payment or book swap happens.</p>
+      <p class="section-intro">The library is parent-reviewed. Requests go to Donald first, then he confirms membership, borrowing, custom books, and any payment details before anything is agreed.</p>
       <div class="info-grid">
         <article class="info-card">
           <span class="card-icon">✍️</span>
           <h3>Custom-made book</h3>
           <p>A brand new story made specially for the reader, with custom characters, places, and ideas.</p>
-          <p class="price-note">£1.50</p>
+          <p class="price-note">£1.50 each</p>
         </article>
         <article class="info-card">
           <span class="card-icon">📖</span>
-          <h3>Buy from stock</h3>
-          <p>Choose one of the books already on the Bookshop shelf and buy your own copy.</p>
-          <p class="price-note">£1.00</p>
+          <h3>Annual library membership</h3>
+          <p>Join the library for a year and borrow books from the shelf with your membership.</p>
+          <p class="price-note">£1.50/year</p>
         </article>
         <article class="info-card">
           <span class="card-icon">🔁</span>
-          <h3>Rent from stock</h3>
-          <p>Borrow a book from the stock shelf, enjoy the adventure, then return it for the next reader.</p>
-          <p class="price-note">£0.35</p>
+          <h3>Borrow with membership</h3>
+          <p>Choose a book, enjoy the adventure, then return it for the next reader.</p>
+          <p class="price-note">Included with membership</p>
         </article>
       </div>
     </section>
@@ -82,16 +82,16 @@
     <section id="order-request" class="section order-section">
       <div class="section-heading">
         <p class="eyebrow">Parent-reviewed requests</p>
-        <h2>Buy, rent, or ask for a custom book</h2>
+        <h2>Join, borrow, or ask for a custom book</h2>
       </div>
-      <p class="section-intro">Use this to ask about a book. No payment is taken on this page — Donald checks the request first and replies with the next step.</p>
+      <p class="section-intro">Use this to ask about membership, borrowing, or a custom book. No payment is taken on this page — Donald checks the request first and replies with the next step.</p>
       <div class="request-layout">
         <div class="request-card">
           <h3>How it works</h3>
           <ol>
-            <li>Choose what you’re interested in.</li>
+            <li>Choose membership, borrowing, a custom book, or a question.</li>
             <li>Send a short request to Donald.</li>
-            <li>Donald confirms availability, delivery/collection, and payment if needed.</li>
+            <li>Donald confirms membership, availability, delivery/collection, and payment if needed.</li>
           </ol>
           <p class="small-note">For now this is a simple request form, not a checkout. Sensible grown-up infrastructure, sadly less exciting than a dragon cashier.</p>
         </div>
@@ -101,13 +101,13 @@
           <label>What would you like?
             <select name="request-type" required>
               <option value="">Choose one…</option>
-              <option>Buy a custom-made book (£1.50)</option>
-              <option>Buy a stock book (£1.00)</option>
-              <option>Rent a stock book (£0.35)</option>
+              <option>Annual library membership (£1.50/year)</option>
+              <option>Borrow a book with membership</option>
+              <option>Request a custom-made book (£1.50)</option>
               <option>Ask a question first</option>
             </select>
           </label>
-          <label>Book or idea details <textarea name="details" rows="5" placeholder="Example: I’d like a custom football story, or I’d like to rent The Liverpool Derby." required></textarea></label>
+          <label>Book or idea details <textarea name="details" rows="5" placeholder="Example: I’d like to join the library, borrow The Liverpool Derby, or request a custom football story." required></textarea></label>
           <button type="submit">Send request to Donald</button>
         </form>
       </div>
@@ -122,7 +122,7 @@
       <div class="coming-list">
         <div><strong>🎭 New characters</strong><span>Heroes, villains, football legends, explorers, animals, and possibly someone who takes biscuits far too seriously.</span></div>
         <div><strong>🗺️ New storylines</strong><span>Fresh adventures, big matches, mystery quests, silly disasters, and surprise endings.</span></div>
-        <div><strong>💡 Other ideas</strong><span>More covers, character profiles, behind-the-scenes drawings, and special bookshop announcements.</span></div>
+        <div><strong>💡 Other ideas</strong><span>More covers, character profiles, behind-the-scenes drawings, and special library announcements.</span></div>
       </div>
     </section>
 
@@ -131,7 +131,7 @@
         <p class="eyebrow">Reader suggestion box</p>
         <h2>Your ideas</h2>
       </div>
-      <p>Got an idea for a future character, storyline, setting, or plot twist? Write it down here for the Bookshop Ideas Department.</p>
+      <p>Got an idea for a future character, storyline, setting, or plot twist? Write it down here for the Library Ideas Department.</p>
       <form class="contact-form idea-form" action="mailto:donlamb@compuserve.com" method="post" enctype="text/plain">
         <label>Your idea title <input name="idea-title" placeholder="Example: The Dragon Goalkeeper" required></label>
         <label>Tell us the idea <textarea name="idea" rows="5" placeholder="A character, story, place, football match, mystery, monster, or anything else..." required></textarea></label>
@@ -190,7 +190,7 @@
   </main>
 
   <footer>
-    <p>© 2026 Finlay's Bookshop. Made with stories, cartoons, and probably biscuits.</p>
+    <p>© 2026 Finlay's Library. Made with stories, cartoons, and probably biscuits.</p>
   </footer>
   <script src="books.js"></script>
 </body>

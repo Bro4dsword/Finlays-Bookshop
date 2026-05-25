@@ -4,7 +4,7 @@ const books = [
     title: "Finlay Goes to Gaul",
     image: "images/book1.JPG",
     imageAlt: "Cover for Finlay Goes to Gaul",
-    description: "A cartoony adventure full of imagination, travelling, and heroic bookshop-level nonsense. Proper description coming soon.",
+    description: "A cartoony adventure full of imagination, travelling, and heroic library-level nonsense. Proper description coming soon.",
     facts: [
       "✨ Written by Finlay",
       "🎨 Cover gallery coming soon",
