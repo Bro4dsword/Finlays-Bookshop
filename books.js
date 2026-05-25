@@ -28,7 +28,13 @@ const books = [
       "⚽ Everton 2 — Liverpool 12",
       "🥅 3 — 4 on pens"
     ],
-    reviews: []
+    reviews: [
+      {
+        rating: 5,
+        reviewer: "Finlay Lamb",
+        text: "This is my favourite book includes my team Liverpool I love it 😻❤️❤️❤️❤️❤️❤️"
+      }
+    ]
   }
 ];
 
