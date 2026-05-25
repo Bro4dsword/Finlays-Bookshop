@@ -192,6 +192,16 @@
             <option value="Other">Other (please specify in review text)</option>
           </select>
         </label>
+        <label>Star Rating
+          <select name="star-rating" required>
+            <option value="">Rate the book...</option>
+            <option value="5">⭐⭐⭐⭐⭐ 5 Stars</option>
+            <option value="4">⭐⭐⭐⭐ 4 Stars</option>
+            <option value="3">⭐⭐⭐ 3 Stars</option>
+            <option value="2">⭐⭐ 2 Stars</option>
+            <option value="1">⭐ 1 Star</option>
+          </select>
+        </label>
         <label>Your Name <input name="reviewer-name" autocomplete="name" required></label>
         <label>Your Review <textarea name="review-text" rows="5" placeholder="What did you think of the book?" required></textarea></label>
         <button type="submit">Submit Review</button>
