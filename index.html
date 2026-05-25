@@ -40,31 +40,7 @@
         <h2>Bookshelf</h2>
       </div>
 
-      <article class="book-card">
-        <img src="images/book1.JPG" alt="Cover for Finlay Goes to Gaul" />
-        <div>
-          <h3>Finlay Goes to Gaul</h3>
-          <p>A cartoony adventure full of imagination, travelling, and heroic bookshop-level nonsense. Proper description coming soon.</p>
-          <ul class="book-facts">
-            <li>✨ Written by Finlay</li>
-            <li>🎨 Cover gallery coming soon</li>
-            <li>🛒 Requests handled by Donald</li>
-          </ul>
-        </div>
-      </article>
-
-      <article class="book-card">
-        <img src="images/book2-liverpool-derby.jpg" alt="Cover for The Liverpool Derby by Finlay" />
-        <div>
-          <h3>The Liverpool Derby</h3>
-          <p>A dramatic FA Cup final showdown: Everton versus Liverpool, settled on penalties. Football chaos, as all proper derbies should be.</p>
-          <ul class="book-facts">
-            <li>✨ Written and illustrated by Finlay</li>
-            <li>⚽ Everton 2 — Liverpool 12</li>
-            <li>🥅 3 — 4 on pens</li>
-          </ul>
-        </div>
-      </article>
+      <div id="bookshelf-list"></div>
     </section>
 
     <section id="gallery" class="section gallery-section">
@@ -72,11 +48,7 @@
         <p class="eyebrow">Artwork corner</p>
         <h2>Image gallery</h2>
       </div>
-      <div class="gallery-grid">
-        <figure><img src="images/book1.JPG" alt="Finlay Goes to Gaul cover"><figcaption>Finlay Goes to Gaul</figcaption></figure>
-        <figure><img src="images/book2-liverpool-derby.jpg" alt="The Liverpool Derby cover"><figcaption>The Liverpool Derby</figcaption></figure>
-        <figure class="coming-soon">Character art soon!</figure>
-      </div>
+      <div id="gallery-list" class="gallery-grid"></div>
     </section>
 
     <section id="prices" class="section prices-section">
@@ -175,21 +147,13 @@
       </div>
       <p>Here you can read reviews from other readers, or add your own!</p>
 
-      <div class="reviews-list">
-        <h3>Finlay Goes to Gaul</h3>
-        <p>No reviews yet. Be the first!</p>
-        <h3>The Liverpool Derby</h3>
-        <p>No reviews yet. Be the first!</p>
-      </div>
+      <div id="reviews-list" class="reviews-list"></div>
 
       <form class="contact-form review-form" action="mailto:donlamb@compuserve.com" method="post" enctype="text/plain">
         <h3>Add Your Own Review</h3>
         <label>Book Title
-          <select name="book-title" required>
+          <select id="review-book-title" name="book-title" required>
             <option value="">Choose a book...</option>
-            <option value="Finlay Goes to Gaul">Finlay Goes to Gaul</option>
-            <option value="The Liverpool Derby">The Liverpool Derby</option>
-            <option value="Other">Other (please specify in review text)</option>
           </select>
         </label>
         <label>Star Rating
@@ -228,5 +192,6 @@
   <footer>
     <p>© 2026 Finlay's Bookshop. Made with stories, cartoons, and probably biscuits.</p>
   </footer>
+  <script src="books.js"></script>
 </body>
 </html>
