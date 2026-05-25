@@ -10,8 +10,13 @@ const books = [
       "🎨 Cover gallery coming soon",
       "🛒 Requests handled by Donald"
     ],
-    reviewAverage: null,
-    reviewCount: 0
+    reviews: [
+      {
+        rating: 5,
+        reviewer: "Daddy",
+        text: "Loved it! Brought me back to my youth!"
+      }
+    ]
   },
   {
     title: "The Liverpool Derby",
@@ -23,8 +28,7 @@ const books = [
       "⚽ Everton 2 — Liverpool 12",
       "🥅 3 — 4 on pens"
     ],
-    reviewAverage: null,
-    reviewCount: 0
+    reviews: []
   }
 ];
 
@@ -50,9 +54,23 @@ function ratingStars(average) {
   return "⭐".repeat(fullStars) + (hasHalfStar ? "½" : "") + "☆".repeat(emptyStars);
 }
 
+function reviewCount(book) {
+  return book.reviews.length;
+}
+
+function reviewAverage(book) {
+  if (reviewCount(book) === 0) {
+    return null;
+  }
+
+  const total = book.reviews.reduce((sum, review) => sum + review.rating, 0);
+  return total / reviewCount(book);
+}
+
 function reviewSummary(book) {
-  const reviewWord = book.reviewCount === 1 ? "review" : "reviews";
-  return `${ratingStars(book.reviewAverage)} (${book.reviewCount} ${reviewWord})`;
+  const count = reviewCount(book);
+  const reviewWord = count === 1 ? "review" : "reviews";
+  return `${ratingStars(reviewAverage(book))} (${count} ${reviewWord})`;
 }
 
 function renderBookshelf() {
@@ -63,7 +81,7 @@ function renderBookshelf() {
     <article class="book-card">
       <img src="${escapeHtml(book.image)}" alt="${escapeHtml(book.imageAlt)}" />
       <div>
-        <h3>${escapeHtml(book.title)} <span class="star-rating" aria-label="${book.reviewCount} reviews">${reviewSummary(book)}</span></h3>
+        <h3>${escapeHtml(book.title)} <span class="star-rating" aria-label="${reviewCount(book)} reviews">${reviewSummary(book)}</span></h3>
         <p>${escapeHtml(book.description)}</p>
         <ul class="book-facts">
           ${book.facts.map(fact => `<li>${escapeHtml(fact)}</li>`).join("")}
@@ -87,8 +105,16 @@ function renderReviewsList() {
   if (!reviewsList) return;
 
   reviewsList.innerHTML = books.map(book => `
-    <h3>${escapeHtml(book.title)} <span class="star-rating" aria-label="${book.reviewCount} reviews">${reviewSummary(book)}</span></h3>
-    <p>No reviews yet. Be the first!</p>
+    <h3>${escapeHtml(book.title)} <span class="star-rating" aria-label="${reviewCount(book)} reviews">${reviewSummary(book)}</span></h3>
+    ${book.reviews.length === 0
+      ? "<p>No reviews yet. Be the first!</p>"
+      : book.reviews.map(review => `
+        <blockquote>
+          <p>${escapeHtml(review.text)}</p>
+          <footer>${ratingStars(review.rating)} — ${escapeHtml(review.reviewer)}</footer>
+        </blockquote>
+      `).join("")
+    }
   `).join("");
 }
 
