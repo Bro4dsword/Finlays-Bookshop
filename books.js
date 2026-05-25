@@ -101,7 +101,43 @@ function renderReviewOptions() {
     '<option value="Other">Other (please specify in review text)</option>';
 }
 
+function attachReviewEmailHandler() {
+  const reviewForm = document.getElementById("review-form");
+  if (!reviewForm) return;
+
+  reviewForm.addEventListener("submit", event => {
+    event.preventDefault();
+
+    const bookTitle = document.getElementById("review-book-title").value;
+    const starRating = document.getElementById("review-star-rating").value;
+    const reviewerName = document.getElementById("reviewer-name").value.trim();
+    const reviewText = document.getElementById("review-text").value.trim();
+
+    const subject = `Review approval request: ${bookTitle}`;
+    const body = `A new Finlay's Bookshop review is ready for approval.
+
+If you approve it, copy and paste this block to Sparky:
+
+Approve this review:
+Book: ${bookTitle}
+Rating: ${starRating} stars
+Reviewer: ${reviewerName}
+Review: ${reviewText}
+
+Original submitted review:
+Book: ${bookTitle}
+Rating: ${starRating} stars
+Reviewer: ${reviewerName}
+Review: ${reviewText}
+
+Nothing is published until Donald approves it.`;
+
+    window.location.href = `mailto:donlamb@compuserve.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  });
+}
+
 renderBookshelf();
 renderGallery();
 renderReviewsList();
 renderReviewOptions();
+attachReviewEmailHandler();
