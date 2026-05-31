@@ -74,10 +74,20 @@ a { color: inherit; }
 }
 
 .logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
   font-weight: 950;
   text-decoration: none;
   letter-spacing: -.02em;
   white-space: nowrap;
+}
+.logo-mark {
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(23,32,51,.16);
 }
 .nav-links { display: flex; flex-wrap: wrap; gap: 6px; justify-content: flex-end; }
 .nav-links a {
@@ -104,6 +114,16 @@ a { color: inherit; }
   border-radius: clamp(28px, 5vw, 48px);
   padding: clamp(30px, 7vw, 82px);
   box-shadow: var(--shadow);
+}
+.hero-logo {
+  display: block;
+  width: clamp(150px, 24vw, 240px);
+  height: auto;
+  margin: 0 0 clamp(18px, 3vw, 28px);
+  border-radius: 28px;
+  border: 7px solid white;
+  box-shadow: 0 18px 35px rgba(23,32,51,.16);
+  background: white;
 }
 .hero-card::after {
   content: "📚 ✨ ⚽";
