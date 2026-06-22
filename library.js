@@ -35,6 +35,66 @@ const books = [
         text: "This is my favourite book includes my team Liverpool I love it 😻❤️❤️❤️❤️❤️❤️"
       }
     ]
+  },
+  {
+    title: "Rob the Lobster goes on Holiday",
+    image: "images/rob-the-lobster-holiday.jpg",
+    imageAlt: "Cover for Rob the Lobster goes on Holiday by Finlay",
+    description: "Rob the Lobster heads off for a sunny seaside holiday, ready for waves, surprises, and a shellfish amount of adventure.",
+    facts: [
+      "✨ Written and illustrated by Finlay",
+      "🦞 Holiday adventure",
+      "🌊 Seaside story"
+    ],
+    reviews: []
+  },
+  {
+    title: "The Family Mystery",
+    image: "images/the-family-mystery.jpg",
+    imageAlt: "Cover for The Family Mystery by Finlay",
+    description: "A family detective story with clues, suspicious looks, and a mystery that needs solving before anyone can relax.",
+    facts: [
+      "✨ Written and illustrated by Finlay",
+      "🕵️ Mystery adventure",
+      "🔎 Clues to discover"
+    ],
+    reviews: []
+  },
+  {
+    title: "The Lonely Gnome",
+    image: "images/the-lonely-gnome.jpg",
+    imageAlt: "Cover for The Lonely Gnome by Finlay",
+    description: "A sad little gnome stands alone in the garden, waiting for friendship, kindness, and maybe a much better day.",
+    facts: [
+      "✨ Written and illustrated by Finlay",
+      "🍄 Garden story",
+      "💛 Friendship theme"
+    ],
+    reviews: []
+  },
+  {
+    title: "The Edinburgh Derby",
+    image: "images/the-edinburgh-derby.jpg",
+    imageAlt: "Cover for The Edinburgh Derby by Finlay",
+    description: "Hearts and Hibs meet in an Edinburgh derby packed with rivalry, goals, and proper football drama.",
+    facts: [
+      "✨ Written and illustrated by Finlay",
+      "⚽ Hearts v Hibs",
+      "🏟️ Edinburgh football story"
+    ],
+    reviews: []
+  },
+  {
+    title: "Five stories",
+    image: "images/five-stories.jpg",
+    imageAlt: "Cover for Five stories by Finlay",
+    description: "A collection of five Finlay stories gathered together in one book, full of different ideas, characters, and adventures.",
+    facts: [
+      "✨ Written and illustrated by Finlay",
+      "📚 Story collection",
+      "5️⃣ Five stories inside"
+    ],
+    reviews: []
   }
 ];
 
