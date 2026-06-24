@@ -46,7 +46,13 @@ const books = [
       "🦞 Holiday adventure",
       "🌊 Seaside story"
     ],
-    reviews: []
+    reviews: [
+      {
+        rating: 5,
+        reviewer: "Finlay Lamb",
+        text: "Lovely\nThis is such a good book. I guarantee you should get it."
+      }
+    ]
   },
   {
     title: "The Family Mystery",
