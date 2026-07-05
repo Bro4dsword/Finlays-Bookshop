@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Adventure Ink Books — a fun place for stories, book covers, updates, and creative projects." />
   <title>Adventure Ink Books</title>
-  <link rel="stylesheet" href="styles.css?v=adventure-ink-title-20260705" />
+  <link rel="stylesheet" href="styles.css?v=pricing-20260705-1" />
 </head>
 <body>
   <header class="hero">
@@ -60,25 +60,53 @@
         <p class="eyebrow">Library counter</p>
         <h2>Membership and prices</h2>
       </div>
-      <p class="section-intro">The library is parent-reviewed. Requests go to Donald first, then he confirms membership, borrowing, custom books, and any payment details before anything is agreed.</p>
-      <div class="info-grid">
-        <article class="info-card">
-          <span class="card-icon">✍️</span>
-          <h3>Custom-made book</h3>
-          <p>A brand new story made specially for the reader, with custom characters, places, and ideas.</p>
-          <p class="price-note">£1.50 each</p>
+      <p class="section-intro">Everyone needs a membership before buying or renting books. Requests go to Donald first, then he confirms the membership, book choice, and payment details before anything is agreed.</p>
+      <p class="membership-rule">Membership is compulsory, but Bronze is free.</p>
+
+      <div class="membership-grid" aria-label="Membership options">
+        <article class="tier-card bronze-tier">
+          <span class="tier-label">Bronze</span>
+          <p class="tier-price">Free</p>
+          <ul class="deal-list">
+            <li>Every 10 books gets 1 free</li>
+          </ul>
         </article>
-        <article class="info-card">
+        <article class="tier-card silver-tier">
+          <span class="tier-label">Silver</span>
+          <p class="tier-price">£1</p>
+          <ul class="deal-list">
+            <li>Every 5 books gets 1 free</li>
+            <li>Free bookmark</li>
+          </ul>
+        </article>
+        <article class="tier-card gold-tier">
+          <span class="tier-label">Gold</span>
+          <p class="tier-price">£3</p>
+          <ul class="deal-list">
+            <li>Every 5 books gets 2 free</li>
+            <li>Free bookmark</li>
+            <li>VIP readers list</li>
+            <li>Early access to books</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="price-strip" aria-label="Book prices">
+        <article>
           <span class="card-icon">📖</span>
-          <h3>Annual library membership</h3>
-          <p>Join the library for a year and borrow books from the shelf with your membership.</p>
-          <p class="price-note">£1.50/year</p>
+          <div>
+            <h3>Buy a book</h3>
+            <p>Keep the book forever.</p>
+          </div>
+          <p class="price-note">£3.00</p>
         </article>
-        <article class="info-card">
+        <article>
           <span class="card-icon">🔁</span>
-          <h3>Borrow with membership</h3>
-          <p>Choose a book, enjoy the adventure, then return it for the next reader.</p>
-          <p class="price-note">Included with membership</p>
+          <div>
+            <h3>Rent a book</h3>
+            <p>Borrow it, read it, then return it.</p>
+          </div>
+          <p class="price-note">£1.00</p>
         </article>
       </div>
     </section>
@@ -86,16 +114,17 @@
     <section id="order-request" class="section order-section">
       <div class="section-heading">
         <p class="eyebrow">Parent-reviewed requests</p>
-        <h2>Join, borrow, or ask for a custom book</h2>
+        <h2>Join, rent, or buy a book</h2>
       </div>
-      <p class="section-intro">Use this to ask about membership, borrowing, or a custom book. No payment is taken on this page — Finlay checks the request first and replies with the next step.</p>
+      <p class="section-intro">Use this to ask about membership, renting, or buying. No payment is taken on this page — Finlay checks the request first and replies with the next step.</p>
       <div class="request-layout">
         <div class="request-card">
           <h3>How it works</h3>
           <ol>
-            <li>Choose membership, borrowing, a custom book, or a question.</li>
+            <li>Choose Bronze, Silver, or Gold membership.</li>
+            <li>Choose whether you want to rent or buy a book.</li>
             <li>Send a short request to Finlay.</li>
-            <li>Finlay confirms membership, availability, delivery/collection, and payment if needed.</li>
+            <li>Finlay confirms availability, delivery/collection, and payment if needed.</li>
           </ol>
           <p class="small-note">For now this is a simple request form, not a checkout. Sensible grown-up infrastructure, sadly less exciting than a dragon cashier.</p>
         </div>
@@ -105,13 +134,15 @@
           <label>What would you like?
             <select name="request-type" required>
               <option value="">Choose one…</option>
-              <option>Annual library membership (£1.50/year)</option>
-              <option>Borrow a book with membership</option>
-              <option>Request a custom-made book (£1.50)</option>
+              <option>Bronze membership (free)</option>
+              <option>Silver membership (£1)</option>
+              <option>Gold membership (£3)</option>
+              <option>Rent a book (£1)</option>
+              <option>Buy a book (£3)</option>
               <option>Ask a question first</option>
             </select>
           </label>
-          <label>Book or idea details <textarea name="details" rows="5" placeholder="Example: I’d like to join the library, borrow The Liverpool Derby, or request a custom football story." required></textarea></label>
+          <label>Book or idea details <textarea name="details" rows="5" placeholder="Example: I’d like Gold membership and to rent The Weird Fish!" required></textarea></label>
           <button type="submit">Send request to Finlay</button>
         </form>
       </div>
