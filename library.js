@@ -1,4 +1,4 @@
-// Add new books here. The bookshelf, gallery, reviews list, and review form dropdown all use this one list.
+// Add new books here. The bookshelf, reviews list, and review form dropdown all use this one list.
 const books = [
   {
     title: "Finlay Goes to Gaul",
@@ -223,15 +223,6 @@ function renderBookshelf() {
   `).join("");
 }
 
-function renderGallery() {
-  const gallery = document.getElementById("gallery-list");
-  if (!gallery) return;
-
-  gallery.innerHTML = books.map(book => `
-    <figure><img src="${escapeHtml(book.image)}" alt="${escapeHtml(book.imageAlt)}"><figcaption>${escapeHtml(book.title)}</figcaption></figure>
-  `).join("") + '<figure class="coming-soon">Character art soon!</figure>';
-}
-
 function renderReviewsList() {
   const reviewsList = document.getElementById("reviews-list");
   if (!reviewsList) return;
@@ -283,7 +274,6 @@ Review: ${reviewText}`;
 }
 
 renderBookshelf();
-renderGallery();
 renderReviewsList();
 renderReviewOptions();
 attachReviewEmailHandler();
