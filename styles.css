@@ -84,8 +84,23 @@ a { color: inherit; }
   gap: 9px;
   font-weight: 950;
   text-decoration: none;
-  letter-spacing: -.02em;
   white-space: nowrap;
+}
+.brand-lockup {
+  display: grid;
+  gap: 1px;
+  line-height: .96;
+}
+.brand-lockup > span {
+  letter-spacing: -.02em;
+}
+.brand-lockup small,
+.footer-brand small {
+  color: var(--book-gold-dark);
+  font-size: .72em;
+  font-weight: 950;
+  letter-spacing: .18em;
+  text-transform: uppercase;
 }
 .logo-mark {
   width: 36px;
@@ -153,7 +168,7 @@ h1, h2, h3 { line-height: 1.02; margin: 0; letter-spacing: -.045em; }
 h1 {
   max-width: 860px;
   font-family: "Courier New", "Lucida Console", monospace;
-  font-size: clamp(4rem, 14vw, 10.8rem);
+  font-size: clamp(4rem, 13vw, 10rem);
   font-weight: 950;
   letter-spacing: -.08em;
   color: var(--navy);
@@ -162,6 +177,21 @@ h1 {
     3px 3px 0 #e2b66c,
     6px 6px 0 #fff4dd,
     8px 8px 0 rgba(7,26,47,.22);
+}
+.site-title {
+  display: grid;
+  gap: clamp(4px, 1vw, 12px);
+}
+.site-title small {
+  display: block;
+  font: inherit;
+  font-size: clamp(1.9rem, 6vw, 4.8rem);
+  color: var(--book-gold-dark);
+  letter-spacing: .18em;
+  line-height: .95;
+  text-shadow:
+    2px 2px 0 #fff4dd,
+    4px 4px 0 rgba(7,26,47,.16);
 }
 h2 { font-size: clamp(2rem, 5.5vw, 4.4rem); }
 h3 { font-size: clamp(1.45rem, 3.2vw, 2.4rem); color: var(--book-gold-dark); }
