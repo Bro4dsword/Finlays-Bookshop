@@ -101,6 +101,66 @@ const books = [
       "5️⃣ Five stories inside"
     ],
     reviews: []
+  },
+  {
+    title: "The Weird Fish!",
+    image: "images/01-the-weird-fish.jpg",
+    imageAlt: "Cover for The Weird Fish! by Finlay",
+    description: "Finlay and Daddy head out for a quiet fishing trip, but the fish they meet is anything but ordinary. It may be weird, it may be wiggly, and it might just become their strangest new friend.",
+    facts: [
+      "✨ Written and illustrated by Finlay",
+      "🎣 Fishing adventure",
+      "🐟 Unexpected friend"
+    ],
+    reviews: []
+  },
+  {
+    title: "The Strange Weird Phone Call",
+    image: "images/02-the-strange-weird-phone-call.jpg",
+    imageAlt: "Cover for The Strange Weird Phone Call by Finlay",
+    description: "Finlay answers a very strange phone call and suddenly everyone seems to think he is the perfect person for a very important job. Nobody warned him there might be speeches, decisions, and possibly biscuits.",
+    facts: [
+      "✨ Written and illustrated by Finlay",
+      "☎️ Mystery phone call",
+      "🍪 Important job"
+    ],
+    reviews: []
+  },
+  {
+    title: "The Mystery Phone Call",
+    image: "images/03-the-mystery-phone-call.jpg",
+    imageAlt: "Cover for The Mystery Phone Call by Finlay",
+    description: "Finlay gets another mysterious phone call, and this time it sends him straight into the middle of a very important football match. There are big crowds, bigger nerves, and probably someone shouting instructions from the sidelines.",
+    facts: [
+      "✨ Written and illustrated by Finlay",
+      "☎️ Mystery phone call",
+      "⚽ Football adventure"
+    ],
+    reviews: []
+  },
+  {
+    title: "The Magic Lawnmower",
+    image: "images/04-the-magic-lawnmower.jpg",
+    imageAlt: "Cover for The Magic Lawnmower by Finlay",
+    description: "PapaD only meant to fix the lawnmower, but after some new wheels go on, it suddenly has plans of its own. The grass had better look busy.",
+    facts: [
+      "✨ Written and illustrated by Finlay",
+      "🛠️ PapaD project",
+      "🌱 Garden chaos"
+    ],
+    reviews: []
+  },
+  {
+    title: "Michael the Magic Mouse",
+    image: "images/05-michael-the-magic-mouse.jpg",
+    imageAlt: "Cover for Michael the Magic Mouse by Finlay",
+    description: "Finlay and Dad are ready for a football match when they discover something very unexpected under the ball: Michael the Magic Mouse. He may be tiny, but he is definitely joining the team.",
+    facts: [
+      "✨ Written and illustrated by Finlay",
+      "🐭 Magic mouse",
+      "⚽ Football friend"
+    ],
+    reviews: []
   }
 ];
 
