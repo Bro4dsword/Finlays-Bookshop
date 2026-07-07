@@ -148,7 +148,18 @@ const books = [
       "🛠️ PapaD project",
       "🌱 Garden chaos"
     ],
-    reviews: []
+    reviews: [
+      {
+        rating: 5,
+        reviewer: "Finlay Lamb",
+        text: "Loved it"
+      },
+      {
+        rating: 5,
+        reviewer: "Donald Lamb",
+        text: "Excellent! 😊"
+      }
+    ]
   },
   {
     title: "Michael the Magic Mouse",
