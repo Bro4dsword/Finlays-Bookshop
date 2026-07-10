@@ -1,6 +1,20 @@
 // Add new books here. The bookshelf, reviews list, and review form dropdown all use this one list.
 const books = [
   {
+    title: "Laugh Your Way Around Scotland",
+    image: "images/laugh-your-way-around-scotland.svg",
+    imageAlt: "Cover for Laugh Your Way Around Scotland by Finlay",
+    bookFile: "books/laugh-your-way-around-scotland.pdf",
+    bookFileLabel: "Open the PDF",
+    description: "Get ready to giggle your way through Scotland! Discover amazing animals, yummy food, super-silly weather, and loads more funny facts about this wonderful country.",
+    facts: [
+      "✨ Written and illustrated by Finlay",
+      "🌍 Funny Scotland facts",
+      "📄 PDF available to read"
+    ],
+    reviews: []
+  },
+  {
     title: "Finlay Goes to Gaul",
     image: "images/book1.JPG",
     imageAlt: "Cover for Finlay Goes to Gaul",
@@ -229,6 +243,7 @@ function renderBookshelf() {
         <ul class="book-facts">
           ${book.facts.map(fact => `<li>${escapeHtml(fact)}</li>`).join("")}
         </ul>
+        ${book.bookFile ? `<a class="book-file-link" href="${escapeHtml(book.bookFile)}" target="_blank" rel="noopener">${escapeHtml(book.bookFileLabel || "Open book")}</a>` : ""}
       </div>
     </article>
   `).join("");

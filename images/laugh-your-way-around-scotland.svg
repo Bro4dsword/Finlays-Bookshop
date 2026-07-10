@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200" role="img" aria-labelledby="title desc">
+  <title id="title">Laugh Your Way Around Scotland cover</title>
+  <desc id="desc">A bright playful cover for Finlay's Scotland facts book.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#bfe7ff"/>
+      <stop offset="1" stop-color="#fff3bf"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="1200" rx="42" fill="url(#sky)"/>
+  <path d="M0 780 C170 700 280 820 450 750 C620 680 745 720 900 650 L900 1200 L0 1200 Z" fill="#65a30d"/>
+  <path d="M0 875 C190 790 315 910 490 835 C675 760 780 815 900 760 L900 1200 L0 1200 Z" fill="#15803d"/>
+  <circle cx="730" cy="150" r="78" fill="#facc15"/>
+  <g fill="#ffffff" opacity=".9">
+    <ellipse cx="170" cy="160" rx="90" ry="42"/>
+    <ellipse cx="235" cy="150" rx="74" ry="36"/>
+    <ellipse cx="115" cy="145" rx="56" ry="30"/>
+  </g>
+  <g transform="translate(106 250)">
+    <rect x="0" y="0" width="688" height="420" rx="34" fill="#ffffff" opacity=".88"/>
+    <text x="344" y="92" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="62" font-weight="900" fill="#5b1733">Laugh Your Way</text>
+    <text x="344" y="168" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="62" font-weight="900" fill="#5b1733">Around Scotland</text>
+    <text x="344" y="250" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="34" font-weight="800" fill="#14532d">funny facts, animals, food</text>
+    <text x="344" y="300" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="34" font-weight="800" fill="#14532d">and very weird weather</text>
+  </g>
+  <g transform="translate(160 735)">
+    <path d="M0 80 L95 5 L180 80 Z" fill="#f8fafc" stroke="#1f2937" stroke-width="8"/>
+    <path d="M140 82 L245 0 L345 82 Z" fill="#f8fafc" stroke="#1f2937" stroke-width="8"/>
+    <path d="M315 85 L430 10 L540 85 Z" fill="#f8fafc" stroke="#1f2937" stroke-width="8"/>
+  </g>
+  <text x="450" y="1075" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="46" font-weight="900" fill="#ffffff">Adventure Ink Books</text>
+</svg>

@@ -258,6 +258,21 @@ h3 { font-size: clamp(1.45rem, 3.2vw, 2.4rem); color: var(--book-gold-dark); }
 .book-card p, .join-section p, .section-intro, .ideas-section p { font-size: 1.08rem; }
 .book-facts { padding-left: 1.2rem; font-weight: 850; }
 .book-facts li { margin: 8px 0; }
+.book-file-link {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--green), #047857);
+  color: white;
+  font-weight: 950;
+  text-decoration: none;
+  box-shadow: 0 6px 0 #14532d;
+}
+.book-file-link:hover {
+  transform: translateY(2px);
+  box-shadow: 0 4px 0 #14532d;
+}
 
 .info-grid, .gallery-grid {
   display: grid;
