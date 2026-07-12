@@ -1,6 +1,18 @@
 // Add new books here. The bookshelf, reviews list, and review form dropdown all use this one list.
 const books = [
   {
+    title: "Birds of Harperrig",
+    image: "images/birds-of-harperrig.png",
+    imageAlt: "Cover for Birds of Harperrig by Finlay",
+    description: "Chirp, chirp! Welcome to Birds of Harperrig! Get ready to discover oodles of feathered friends, fluttery facts, and so much more!",
+    facts: [
+      "✨ Written and illustrated by Finlay",
+      "🐦 Harperrig bird facts",
+      "🌿 Feathered friends"
+    ],
+    reviews: []
+  },
+  {
     title: "Laugh Your Way Around Scotland",
     image: "images/laugh-your-way-around-scotland.png",
     imageAlt: "Cover for Laugh Your Way Around Scotland by Finlay",
