@@ -248,7 +248,7 @@ h3 { font-size: clamp(1.45rem, 3.2vw, 2.4rem); color: var(--book-gold-dark); }
   display: block;
   width: 100%;
   padding: 0;
-  overflow: hidden;
+  overflow: visible;
   border: 0;
   border-radius: 28px;
   background: white;
@@ -274,10 +274,10 @@ h3 { font-size: clamp(1.45rem, 3.2vw, 2.4rem); color: var(--book-gold-dark); }
 }
 .book-month-ribbon {
   position: absolute;
-  top: 26px;
-  left: -54px;
-  width: 245px;
-  padding: 10px 16px;
+  top: 28px;
+  left: -70px;
+  width: 300px;
+  padding: 12px 18px;
   transform: rotate(-38deg);
   transform-origin: center;
   background: linear-gradient(135deg, var(--sun), var(--book-gold));
@@ -285,7 +285,7 @@ h3 { font-size: clamp(1.45rem, 3.2vw, 2.4rem); color: var(--book-gold-dark); }
   border-top: 3px solid rgba(255,255,255,.76);
   border-bottom: 3px solid rgba(122,66,24,.24);
   box-shadow: 0 8px 18px rgba(7,26,47,.18);
-  font-size: 1.02rem;
+  font-size: 1rem;
   font-weight: 1000;
   letter-spacing: .04em;
   line-height: 1.05;
@@ -697,10 +697,10 @@ footer { text-align: center; padding: 28px 16px 48px; font-weight: 950; color: v
   .nav-links a { padding: 8px 10px; }
   .button, button { width: 100%; text-align: center; }
   .book-month-ribbon {
-    top: 20px;
-    left: -64px;
-    width: 250px;
-    font-size: .92rem;
+    top: 22px;
+    left: -78px;
+    width: 285px;
+    font-size: .88rem;
   }
   .reader-controls {
     display: grid;
