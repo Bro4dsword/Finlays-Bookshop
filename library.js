@@ -196,19 +196,71 @@ const books = [
       "⚽ Football friend"
     ],
     reviews: []
+  },
+  {
+    title: "Laugh Your Way Around Mongolia",
+    image: "images/laugh-your-way-around-mongolia/cover.png",
+    imageAlt: "Cover for Laugh Your Way Around Mongolia by Finlay",
+    description: "A funny tour around Mongolia with horses, food, facts, games, and Finlay's own adventure-book energy.",
+    facts: [
+      "✨ Written and illustrated by Finlay",
+      "🌍 Funny Mongolia facts",
+      "🐴 Horses, food, and places to visit"
+    ],
+    reviews: []
   }
 ];
 
 const bookOfTheMonth = {
-  title: "Birds of Harperrig",
-  coverImage: "images/birds-of-harperrig.png",
-  coverAlt: "Cover for Birds of Harperrig by Finlay",
-  description: "Finlay's featured read this month is packed with feathered friends, bird facts, and oodles of Harperrig nature.",
+  title: "Laugh Your Way Around Mongolia",
+  coverImage: "images/laugh-your-way-around-mongolia/cover.png",
+  coverAlt: "Cover for Laugh Your Way Around Mongolia by Finlay",
+  description: "Finlay's featured read this month is a funny trip around Mongolia, with facts, places to visit, food, animals, games, and more.",
   badgeText: "Book of the Month",
   readerPages: [
     {
-      image: "images/birds-of-harperrig.png",
-      alt: "Birds of Harperrig front cover"
+      image: "images/laugh-your-way-around-mongolia/cover.png",
+      alt: "Laugh Your Way Around Mongolia front cover"
+    },
+    {
+      image: "images/laugh-your-way-around-mongolia/page-01.png",
+      alt: "Laugh Your Way Around Mongolia page 1"
+    },
+    {
+      image: "images/laugh-your-way-around-mongolia/page-02.png",
+      alt: "Laugh Your Way Around Mongolia page 2"
+    },
+    {
+      image: "images/laugh-your-way-around-mongolia/page-03.png",
+      alt: "Laugh Your Way Around Mongolia page 3"
+    },
+    {
+      image: "images/laugh-your-way-around-mongolia/page-04.png",
+      alt: "Laugh Your Way Around Mongolia page 4"
+    },
+    {
+      image: "images/laugh-your-way-around-mongolia/page-05.png",
+      alt: "Laugh Your Way Around Mongolia page 5"
+    },
+    {
+      image: "images/laugh-your-way-around-mongolia/page-06.png",
+      alt: "Laugh Your Way Around Mongolia page 6"
+    },
+    {
+      image: "images/laugh-your-way-around-mongolia/page-07.png",
+      alt: "Laugh Your Way Around Mongolia page 7"
+    },
+    {
+      image: "images/laugh-your-way-around-mongolia/page-08.png",
+      alt: "Laugh Your Way Around Mongolia page 8"
+    },
+    {
+      image: "images/laugh-your-way-around-mongolia/page-09.png",
+      alt: "Laugh Your Way Around Mongolia page 9"
+    },
+    {
+      image: "images/laugh-your-way-around-mongolia/page-10.png",
+      alt: "Laugh Your Way Around Mongolia page 10"
     }
   ],
   downloadPdf: ""
