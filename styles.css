@@ -247,6 +247,7 @@ h3 { font-size: clamp(1.45rem, 3.2vw, 2.4rem); color: var(--book-gold-dark); }
   position: relative;
   display: block;
   width: 100%;
+  margin-top: clamp(22px, 3vw, 34px);
   padding: 0;
   overflow: visible;
   border: 0;
@@ -274,23 +275,42 @@ h3 { font-size: clamp(1.45rem, 3.2vw, 2.4rem); color: var(--book-gold-dark); }
 }
 .book-month-ribbon {
   position: absolute;
-  top: 28px;
-  left: -70px;
-  width: 300px;
-  padding: 12px 18px;
-  transform: rotate(-38deg);
+  top: -12px;
+  left: -42px;
+  width: 205px;
+  padding: 8px 14px;
+  transform: rotate(-32deg);
   transform-origin: center;
-  background: linear-gradient(135deg, var(--sun), var(--book-gold));
-  color: var(--navy);
-  border-top: 3px solid rgba(255,255,255,.76);
-  border-bottom: 3px solid rgba(122,66,24,.24);
-  box-shadow: 0 8px 18px rgba(7,26,47,.18);
-  font-size: 1rem;
+  background: linear-gradient(135deg, #d83a35 0%, #b91426 52%, #8f1020 100%);
+  color: white;
+  border-top: 2px solid rgba(255,255,255,.78);
+  border-bottom: 2px solid rgba(70,5,12,.35);
+  border-radius: 5px;
+  box-shadow: 0 8px 18px rgba(7,26,47,.18), inset 0 1px 0 rgba(255,255,255,.28);
+  font-size: .72rem;
   font-weight: 1000;
-  letter-spacing: .04em;
+  letter-spacing: .03em;
   line-height: 1.05;
   text-align: center;
+  text-shadow: 0 1px 1px rgba(72, 0, 8, .35);
   text-transform: uppercase;
+}
+.book-month-ribbon::before,
+.book-month-ribbon::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  width: 22px;
+  height: 14px;
+  background: #7f0d1b;
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  filter: drop-shadow(0 3px 2px rgba(7,26,47,.14));
+}
+.book-month-ribbon::before {
+  left: 8px;
+}
+.book-month-ribbon::after {
+  right: 8px;
 }
 .book-month-copy {
   display: grid;
@@ -697,10 +717,10 @@ footer { text-align: center; padding: 28px 16px 48px; font-weight: 950; color: v
   .nav-links a { padding: 8px 10px; }
   .button, button { width: 100%; text-align: center; }
   .book-month-ribbon {
-    top: 22px;
-    left: -78px;
-    width: 285px;
-    font-size: .88rem;
+    top: -14px;
+    left: -40px;
+    width: 190px;
+    font-size: .66rem;
   }
   .reader-controls {
     display: grid;
