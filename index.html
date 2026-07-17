@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Adventure Ink Books — a fun place for stories, book covers, updates, and creative projects." />
   <title>Adventure Ink Books</title>
-  <link rel="stylesheet" href="styles.css?v=about-calendar-20260716-1" />
+  <link rel="stylesheet" href="styles.css?v=book-month-20260717-1" />
 </head>
 <body>
   <header class="hero">
@@ -38,6 +38,15 @@
   </header>
 
   <main>
+    <section id="book-of-the-month" class="section book-month-section" aria-labelledby="book-month-title">
+      <div class="section-heading">
+        <p class="eyebrow">Featured read</p>
+        <h2 id="book-month-title">Book of the Month</h2>
+      </div>
+
+      <div id="book-month-feature"></div>
+    </section>
+
     <section id="books" class="section">
       <div class="section-heading">
         <p class="eyebrow">Latest book</p>
@@ -223,6 +232,29 @@
   <footer>
     <p>© 2026 <span class="footer-brand"><span>Adventure Ink</span> <small>Books</small></span>. Made with stories, cartoons, and probably biscuits.</p>
   </footer>
-  <script src="library.js?v=bookshelf-birds-harperrig-20260712-1"></script>
+
+  <div id="book-reader" class="reader-modal" role="dialog" aria-modal="true" aria-labelledby="reader-title" hidden>
+    <div class="reader-shell">
+      <div class="reader-toolbar">
+        <div>
+          <p class="eyebrow">Adventure Ink reader</p>
+          <h2 id="reader-title">Book reader</h2>
+        </div>
+        <button type="button" class="reader-close" aria-label="Close reader">Close</button>
+      </div>
+
+      <figure class="reader-page-frame">
+        <img id="reader-page-image" src="" alt="" />
+        <figcaption id="reader-page-count"></figcaption>
+      </figure>
+
+      <div class="reader-controls" aria-label="Reader controls">
+        <button type="button" id="reader-prev">Previous</button>
+        <button type="button" id="reader-next">Next</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="library.js?v=book-month-20260717-1"></script>
 </body>
 </html>

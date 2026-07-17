@@ -199,6 +199,21 @@ const books = [
   }
 ];
 
+const bookOfTheMonth = {
+  title: "Birds of Harperrig",
+  coverImage: "images/birds-of-harperrig.png",
+  coverAlt: "Cover for Birds of Harperrig by Finlay",
+  description: "Finlay's featured read this month is packed with feathered friends, bird facts, and oodles of Harperrig nature.",
+  badgeText: "Book of the Month",
+  readerPages: [
+    {
+      image: "images/birds-of-harperrig.png",
+      alt: "Birds of Harperrig front cover"
+    }
+  ],
+  downloadPdf: ""
+};
+
 function escapeHtml(text) {
   return String(text)
     .replace(/&/g, "&amp;")
@@ -258,6 +273,33 @@ function renderBookshelf() {
   `).join("");
 }
 
+function renderBookOfTheMonth() {
+  const feature = document.getElementById("book-month-feature");
+  if (!feature) return;
+
+  const hasPdf = Boolean(bookOfTheMonth.downloadPdf);
+
+  feature.innerHTML = `
+    <article class="book-month-card">
+      <button type="button" class="book-month-cover" aria-label="Open ${escapeHtml(bookOfTheMonth.title)} in the reader">
+        <img src="${escapeHtml(bookOfTheMonth.coverImage)}" alt="${escapeHtml(bookOfTheMonth.coverAlt)}" />
+        <span class="book-month-ribbon">${escapeHtml(bookOfTheMonth.badgeText)}</span>
+      </button>
+      <div class="book-month-copy">
+        <h3>${escapeHtml(bookOfTheMonth.title)}</h3>
+        <p>${escapeHtml(bookOfTheMonth.description)}</p>
+        <div class="book-month-actions">
+          <button type="button" class="reader-open-button">Read this book</button>
+          ${hasPdf ? `<a class="button secondary-button" href="${escapeHtml(bookOfTheMonth.downloadPdf)}" download>Download PDF</a>` : ""}
+        </div>
+      </div>
+    </article>
+  `;
+
+  feature.querySelector(".book-month-cover").addEventListener("click", () => openReader(0));
+  feature.querySelector(".reader-open-button").addEventListener("click", () => openReader(0));
+}
+
 function renderReviewsList() {
   const reviewsList = document.getElementById("reviews-list");
   if (!reviewsList) return;
@@ -308,7 +350,95 @@ Review: ${reviewText}`;
   });
 }
 
+let readerPageIndex = 0;
+
+function readerPages() {
+  return bookOfTheMonth.readerPages.filter(page => page && page.image);
+}
+
+function updateReaderPage() {
+  const pages = readerPages();
+  const image = document.getElementById("reader-page-image");
+  const count = document.getElementById("reader-page-count");
+  const prev = document.getElementById("reader-prev");
+  const next = document.getElementById("reader-next");
+
+  if (!image || !count || !prev || !next || pages.length === 0) return;
+
+  const page = pages[readerPageIndex];
+  image.src = page.image;
+  image.alt = page.alt || `${bookOfTheMonth.title} page ${readerPageIndex + 1}`;
+  count.textContent = `Page ${readerPageIndex + 1} of ${pages.length}`;
+  prev.disabled = readerPageIndex === 0;
+  next.disabled = readerPageIndex === pages.length - 1;
+}
+
+function openReader(startPage) {
+  const reader = document.getElementById("book-reader");
+  const title = document.getElementById("reader-title");
+  const pages = readerPages();
+  if (!reader || pages.length === 0) return;
+
+  readerPageIndex = Math.min(Math.max(startPage, 0), pages.length - 1);
+  if (title) title.textContent = bookOfTheMonth.title;
+  updateReaderPage();
+  reader.hidden = false;
+  document.body.classList.add("reader-open");
+
+  const closeButton = reader.querySelector(".reader-close");
+  if (closeButton) closeButton.focus();
+}
+
+function closeReader() {
+  const reader = document.getElementById("book-reader");
+  if (!reader) return;
+
+  reader.hidden = true;
+  document.body.classList.remove("reader-open");
+}
+
+function attachReaderControls() {
+  const reader = document.getElementById("book-reader");
+  const prev = document.getElementById("reader-prev");
+  const next = document.getElementById("reader-next");
+  const close = reader ? reader.querySelector(".reader-close") : null;
+  if (!reader || !prev || !next || !close) return;
+
+  prev.addEventListener("click", () => {
+    readerPageIndex = Math.max(readerPageIndex - 1, 0);
+    updateReaderPage();
+  });
+
+  next.addEventListener("click", () => {
+    readerPageIndex = Math.min(readerPageIndex + 1, readerPages().length - 1);
+    updateReaderPage();
+  });
+
+  close.addEventListener("click", closeReader);
+  reader.addEventListener("click", event => {
+    if (event.target === reader) {
+      closeReader();
+    }
+  });
+
+  document.addEventListener("keydown", event => {
+    if (reader.hidden) return;
+
+    if (event.key === "Escape") {
+      closeReader();
+    } else if (event.key === "ArrowLeft" && readerPageIndex > 0) {
+      readerPageIndex -= 1;
+      updateReaderPage();
+    } else if (event.key === "ArrowRight" && readerPageIndex < readerPages().length - 1) {
+      readerPageIndex += 1;
+      updateReaderPage();
+    }
+  });
+}
+
 renderBookshelf();
+renderBookOfTheMonth();
 renderReviewsList();
 renderReviewOptions();
 attachReviewEmailHandler();
+attachReaderControls();
